@@ -17,7 +17,9 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - SPRING_DATA_MONGODB_URI=mongodb://mongo:27017/backenddb
+      - MONGO_URI=mongodb://mongo:27017/moviedb
+      - JWT_SECRET=${JWT_SECRET:-your_jwt_secret_key}
+      - API_KEY=${API_KEY:-your_omdb_api_key}
     restart: on-failure
 
 volumes:

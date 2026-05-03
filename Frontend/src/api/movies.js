@@ -1,5 +1,6 @@
 // Central API helper for movie-related requests
-const BASE = 'https://movie-website-1-1.onrender.com/api/movies';
+const API_URL = import.meta.env.VITE_API_URL || 'https://movie-website-1-1.onrender.com';
+const BASE = `${API_URL}/api/movies`;
 
 export async function searchMovies(query) {
   const res = await fetch(`${BASE}/search?q=${encodeURIComponent(query)}`);
