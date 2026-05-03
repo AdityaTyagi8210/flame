@@ -15,7 +15,7 @@ public class CorsConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         configuration.setAllowedOrigins(List.of(
-                "https://project-1-puce-three.vercel.app",
+                "https://flame-o1z8.vercel.app",
                 "http://localhost:5173",
                 "http://localhost:3000"
         ));
