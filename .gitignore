@@ -2,3 +2,10 @@
 # Runtime artifacts
 backend.log
 backend.pid
+# Maven build output
+Backend-Java/target/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
