@@ -26,7 +26,7 @@ const AuthModal = ({ isOpen, onClose, initialView, onLoginSuccess }) => {
     setError('');
     setLoading(true);
 
-    const BASE_URL = import.meta.env.VITE_API_URL || "https://movie-website-1-1.onrender.com";
+    const BASE_URL = import.meta.env.VITE_API_URL || "https://flame-7.onrender.com";
 
 const url = isLoginView 
   ? `${BASE_URL}/api/auth/login`
