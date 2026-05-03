@@ -1,0 +1,25 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo:6.0
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  backend:
+    build:
+      context: ./Backend-Java
+      dockerfile: Dockerfile
+    depends_on:
+      - mongo
+    ports:
+      - "3000:3000"
+    environment:
+      - SPRING_DATA_MONGODB_URI=mongodb://mongo:27017/backenddb
+    restart: on-failure
+
+volumes:
+  mongo_data:
+    driver: local
