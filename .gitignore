@@ -5,16 +5,7 @@ backend.pid
 # Maven build output
 Backend-Java/target/
 
-# Node
-Frontend/node_modules/
-
 # IDE files
 .idea/
 .vscode/
 *.iml
-
-# Local env overrides
-.env.local
-.env.*.local
-.env.development
-.env.production
